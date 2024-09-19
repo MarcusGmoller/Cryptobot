@@ -32,7 +32,6 @@ def build_jwt(uri):
 def main():
     uri = f"{request_method} {request_host}{request_path}"
     jwt_token = build_jwt(uri)
-    # Dette vil forberede en streng til eksport af JWT-token som en miljøvariabel
     print(f'export JWT="{jwt_token}"')
 
 if __name__ == "__main__":

@@ -8,7 +8,8 @@ import requests
 
 app = Flask(__name__)
 
-# Erstat med dine egne API-oplysninger
+# Erstat med dine egne API-oplysninger 
+#Lav et getenv miljø 
 API_KEY = os.getenv('COINBASE_API_KEY')
 API_SECRET = os.getenv('COINBASE_API_SECRET')
 API_PASSPHRASE = os.getenv('COINBASE_API_PASSPHRASE')
