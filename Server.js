@@ -20,8 +20,15 @@ app.get('/', (req, res) => {
 const ws = new WebSocket('wss://advanced-trade-ws.coinbase.com');
 
 ws.on('open', function open() {
-  // Send din abonnementsanmodning her
+  const message = {
+    type: "subscribe",
+    channel: "level2",
+    product_ids: ["BTC-USD"]
+  };
+  
+  ws.send(JSON.stringify(message));
 });
+
 
 ws.on('message', function incoming(data) {
     console.log('Data received from WebSocket:', data); // logger data
