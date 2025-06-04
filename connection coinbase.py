@@ -7,7 +7,7 @@ from flask import Flask, jsonify
 import requests
 
 app = Flask(__name__)
-
+#tester 
 # Erstat med dine egne API-oplysninger 
 #Lav et getenv miljø 
 API_KEY = os.getenv('COINBASE_API_KEY')
